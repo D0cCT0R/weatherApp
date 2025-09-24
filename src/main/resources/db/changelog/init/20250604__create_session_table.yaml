@@ -1,0 +1,42 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_session_table
+      author: D0cCT0R
+      changes:
+        - createTable:
+            tableName: sessions
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: expires_at
+                  type: timestamptz
+                  defaultValueComputed: "NOW() + INTERVAL '1 HOUR'"
+                  constraints:
+                    nullable: false
+
+        - createIndex:
+            tableName: sessions
+            indexName: idx_sessions_user_id
+            columns:
+              - column:
+                  name: user_id
+
+        - addForeignKeyConstraint:
+            baseTableName: sessions
+            baseColumnNames: user_id
+            referencedTableName: users
+            referencedColumnNames: userId
+            constraintName: fk_sessions_user_id
+            onUpdate: cascade
+            onDelete: cascade
+            validate: true

@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("/css/reset.css");
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: #1b262c;
+}
+
+.container {
+    max-width: 1277px;
+    margin: auto;
+}
+
+.header {
+    padding-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_logo {
+    font-weight: 600;
+    font-size: 40px;
+    color: #fff;
+}
+.header_sign-up {
+    padding: 20px 35px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: inset 7px 7px 10px 0 rgba(79, 136, 167, 0.3);
+    border-radius: 20px;
+    background: linear-gradient(145deg, #3a5e72 0%, #5c93b1 100%);
+    transition: opacity 0.5s;
+}
+
+.header_sign-up:hover {
+    opacity: 0.8;
+}
+.header_user-login {
+    color: #fff;
+    font-size: 20px;
+}
+.main {
+    padding-top: 87px;
+}
+.main_upper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main_description {
+    max-width: 778px;
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 35px;
+}
+.main_description_gradient {
+    font-weight: 700;
+    color: #78cfff;
+}
+
+.main_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.form_search {
+    color: #fff;
+    border-radius: 12px;
+    padding: 15px 40px;
+    box-shadow: inset 10px 10px 30px 0 rgba(36, 52, 61, 0.6);
+    background: #24343d;
+    transition: opacity 0.2s;
+    text-align: left;
+    width: 300px;
+    box-sizing: border-box;
+}
+.form_search::placeholder {
+    opacity: 0.3;
+    color: #fff;
+}
+
+input:-webkit-autofill {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #fff !important;
+}
+
+/* Хак для фона автозаполнения */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 600000s 0s, color 600000s 0s !important;
+    transition-delay: 600000s !important;
+}
+
+/* Для Firefox */
+@-moz-document url-prefix() {
+    input:-moz-autofill,
+    input:-moz-autofill:focus {
+        filter: none; /* Отключаем стандартные стили */
+        background-color: #24343d !important;
+        color: #fff !important;
+        text-shadow: none !important;
+    }
+}
+/* Современный стандарт */
+input:autofill {
+    background-color: #24343d !important;
+    color: #fff !important;
+}
+.form_search:hover {
+    opacity: 0.9;
+}
+
+.form_search::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #fff;
+}
+
+.form_button_submit {
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: inset 10px 10px 30px 0 rgba(36, 52, 61, 0.6);
+    background: #24343d;
+    transition: opacity 0.2s;
+}
+
+.form_button_submit:hover {
+    opacity: 0.9;
+}
+.weather_card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 10px;
+    row-gap: 20px;
+    padding-top: 78px;
+    justify-content: center;
+}
+.weather_card {
+    border-radius: 50px;
+    width: 300px;
+    height: 400px;
+    transition: opacity 0.2s;
+    backdrop-filter: blur(42px);
+    box-shadow: inset -5px -5px 250px 0 rgba(255, 255, 255, 0.02);
+    background: radial-gradient(
+            107.32% 141.42% at 0% 0%,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0) 100%
+    );
+}
+.weather_card:hover {
+    opacity: 0.95;
+}
+.weather_card_city {
+    text-align: center;
+    color: #fff;
+    margin-top: 50%;
+    font-weight: 700;
+    font-size: 40px;
+}
+.weather_card_temp {
+    text-align: center;
+    font-weight: 200;
+    color: #fff;
+    font-size: 40px;
+}
+
+.sign-in_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sign-in_container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.sign-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sign-in_form_login {
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 15px 10px 30px;
+    box-shadow: inset 10px 10px 30px 0 rgba(36, 52, 61, 0.6);
+    background: #24343d;
+}
+.sign-in_form_password {
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 15px 10px 30px;
+    box-shadow: inset 10px 10px 30px 0 rgba(36, 52, 61, 0.6);
+    background: #24343d;
+}
+.sign-in_form_btn {
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: inset 10px 10px 30px 0 rgba(36, 52, 61, 0.6);
+    background: #24343d;
+    color: #fff;
+}
+.sign-up_href {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.sign-in_form_login::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #fff;
+}
+
+.sign-in_form_password::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #fff;
+}
+
+.sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sign-up_container {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.sign-up_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sign-up_login {
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 15px 10px 30px;
+    box-shadow: inset 10px 10px 30px 0 rgba(36, 52, 61, 0.6);
+    background: #24343d;
+}
+.sign-up_password {
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 15px 10px 30px;
+    box-shadow: inset 10px 10px 30px 0 rgba(36, 52, 61, 0.6);
+    background: #24343d;
+}
+.sign-in_href {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.sign-up_login::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #fff;
+}
+
+.sign-up_password::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #fff;
+}
+
+.weather_card-list_form {
+    text-align: center;
+    margin-top: 10px;
+}
+.weather_card-list_button {
+    padding: 20px 35px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: inset 7px 7px 10px 0 rgba(79, 136, 167, 0.3);
+    border-radius: 20px;
+    background: gray;
+}
+
+.header_auth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

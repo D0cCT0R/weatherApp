@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>WeatherApp</title>
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="container">
+<header class="header">
+    <div class="header_auth">
+        <a th:href="@{/}" class="header_logo">Dark Weather</a>
+        <a class="header_sign-up" th:href="@{/sign-up}">Sign Up</a>
+    </div>
+</header>
+<main class="main">
+    <div th:if="${error}">
+        <p style="color: red" th:text="${error}"></p>
+    </div>
+</main>
+</body>
+</html>

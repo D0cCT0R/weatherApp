@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+  </head>
+  <body class="sign-up container">
+    <div class="sign-up_container">
+      <h2 class="header_logo" style="margin-bottom: 20px">Dark Weather</h2>
+      <form th:action="@{/sign-up}" method="post" class="sign-up_form">
+        <div th:if="${error}">
+          <p style="color: red" th:text="${error}"></p>
+        </div>
+        <input
+          type="text"
+          name="login"
+          class="sign-up_login"
+          placeholder="Введите логин"
+          required
+        />
+        <input
+          type="text"
+          name="password"
+          class="sign-up_password"
+          placeholder="Введите пароль"
+          required
+        />
+        <button type="submit" class="sign-up_password">
+          Зарегестрироваться
+        </button>
+      </form>
+      <a th:href="@{/sign-in}" class="sign-in_href">Войти</a>
+    </div>
+  </body>
+</html>

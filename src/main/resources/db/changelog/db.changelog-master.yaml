@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: init/20250604__create_user_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: init/20250604__create_session_table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: init/20250604__create_location_table.yaml
+      relativeToChangelogFile: true

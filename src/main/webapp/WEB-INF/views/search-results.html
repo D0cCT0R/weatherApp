@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WeatherApp</title>
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="container">
+<header class="header" th:switch="${user != null}">
+    <div th:case="true" class="header_top">
+        <a th:href="@{/}" class="header_logo">Dark Weather</a>
+        <form th:action="@{/logout}" method="post" class="main_form">
+            <p class="header_user-login" th:text="${user.login}"></p>
+            <button type="submit" class="form_button_submit">
+                <p>Выйти из профиля</p>
+            </button>
+        </form>
+    </div>
+    <div th:case="false" class="header_auth">
+        <a th:href="@{/}" class="header_logo">Dark Weather</a>
+        <a class="header_sign-up" th:href="@{/sign-up}">Sign Up</a>
+    </div>
+</header>
+<main class="main">
+    <div class="main_upper">
+        <p class="main_description">
+            Seeing the weather of the whole world with
+            <span class="main_description_gradient">Dark Weather!</span>
+        </p>
+        <form th:action="@{/weather/search}" method="get" class="main_form">
+            <input
+                    type="text"
+                    placeholder="Введите город..."
+                    name="query"
+                    class="form_search"
+                    required
+            />
+            <button type="submit" class="form_button_submit">
+                <img th:src="@{/img/search.svg}" alt="search"/>
+            </button>
+        </form>
+    </div>
+    <ul th:if="${weatherList != null and !weatherList.isEmpty()}" class="weather_card-list">
+        <li th:each="weather : ${weatherList}" class="weather_card">
+            <p class="weather_card_city" th:text="${weather.name()}"></p>
+            <p class="weather_card_temp" th:text="${weather.main().temp()} + '°C'"></p>
+            <form th:action="@{/weather/favorites}" method="post" class="weather_card-list_form" th:if="${user != null}">
+                <input name="name" type="hidden" th:value="${weather.name()}">
+                <input name="lat" type="hidden" th:value="${weather.coord().lat()}" >
+                <input name="lon" type="hidden" th:value="${weather.coord().lon()}">
+                <button type="submit" class="weather_card-list_button">Add</button>
+            </form>
+        </li>
+    </ul>
+    <div th:if="${error}">
+        <p style="color: red" th:text="${error}"></p>
+    </div>
+</main>
+</body>
+</html>

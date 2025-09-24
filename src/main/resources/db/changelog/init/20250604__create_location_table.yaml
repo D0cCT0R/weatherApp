@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_location_table
+      author: D0cCT0R
+      changes:
+        - createTable:
+            tableName: locations
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: latitude
+                  type: double precision
+                  constraints:
+                    nullable: false
+              - column:
+                  name: longitude
+                  type: double precision
+                  constraints:
+                    nullable: false
+
+        - createIndex:
+            indexName: idx_locations_user_id
+            tableName: locations
+            columns:
+              - column:
+                  name: user_id
+
+        - addForeignKeyConstraint:
+            baseTableName: locations
+            baseColumnNames: user_id
+            constraintName: fk_locations_user_id
+            referencedTableName: users
+            referencedColumnNames: userId
+            onDelete: CASCADE
+            onUpdate: CASCADE

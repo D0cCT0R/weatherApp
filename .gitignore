@@ -1,0 +1,39 @@
+target/
+*.jar
+*.war
+*.ear
+
+# IDE
+.idea/
+*.iml
+.settings/
+.project
+.classpath
+.vscode/
+bin/
+out/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+*.versionsBackup
+dependency-reduced-pom.xml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Local configs (исключаем только локальные переопределения)
+application-*.properties
+application-*.yml
+
+# Но разрешаем основные конфиги
+!src/main/resources/application.properties
+!src/main/resources/application-test.properties
+
+# Temp files
+*.tmp
+*.cache_Store
