@@ -32,7 +32,7 @@ public class HomeController {
             if(!weatherList.isEmpty()) {
                 model.addAttribute("locations", weatherList);
             }
-            model.addAttribute("login", user.login());
+            model.addAttribute("user", user);
         }
         return "home";
     }
