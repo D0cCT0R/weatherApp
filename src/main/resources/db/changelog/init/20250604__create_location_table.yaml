@@ -45,6 +45,6 @@ databaseChangeLog:
             baseColumnNames: user_id
             constraintName: fk_locations_user_id
             referencedTableName: users
-            referencedColumnNames: userId
+            referencedColumnNames: id
             onDelete: CASCADE
             onUpdate: CASCADE
