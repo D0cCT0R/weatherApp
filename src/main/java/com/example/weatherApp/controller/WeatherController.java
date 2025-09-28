@@ -38,7 +38,7 @@ public class WeatherController {
                                 BindingResult bindingResult,
                                 @RequestAttribute(name = "user", required = false) UserDto user,
                                 Model model) throws WeatherApiException {
-        log.info("Search request has been received query: {}, userId: {}", searchDto.query(), user.id());
+        log.info("Search request has been received query: {}", searchDto.query());
         if (bindingResult.hasErrors()) {
             model.addAttribute("searchError", bindingResult.getFieldError().getDefaultMessage());
             return "home";
@@ -46,7 +46,7 @@ public class WeatherController {
         List<WeatherDto> weatherList = searchFacadeService.searchWeatherByQuery(searchDto.query());
         model.addAttribute("weatherList", weatherList);
         model.addAttribute("user", user);
-        log.info("Search request processed successfully query: {}, userId: {}", searchDto.query(), user.id());
+        log.info("Search request processed successfully query: {}", searchDto.query());
         return "search-results";
     }
 
