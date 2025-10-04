@@ -19,6 +19,7 @@ import java.util.Properties;
 @PropertySource("classpath:application-test.properties")
 public class TestDataConfig {
 
+
     @Value("${db.url}")
     private String DATABASE_URL;
     @Value("${db.user}")

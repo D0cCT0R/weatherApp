@@ -15,6 +15,7 @@ public class ThymeleafConfig {
     private final ApplicationContext context;
 
 
+
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
         SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();

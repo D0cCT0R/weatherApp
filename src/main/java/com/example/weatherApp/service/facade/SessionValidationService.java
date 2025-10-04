@@ -23,6 +23,7 @@ public class SessionValidationService {
         this.sessionService = sessionService;
     }
 
+
     public Optional<UserDto> sessionValidator(String uuid) throws DatabaseIsNotAvailableException {
         if (!UUIDValidator.isValidUuid(uuid)) {
             return Optional.empty();

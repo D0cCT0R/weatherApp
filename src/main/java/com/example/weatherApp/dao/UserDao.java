@@ -24,6 +24,7 @@ public class UserDao {
         this.sessionFactory = sessionFactory;
     }
 
+
     public User save(User user) throws DuplicateUserException, DatabaseIsNotAvailableException {
         try {
             log.debug("Executing save User {} ", user.getLogin());

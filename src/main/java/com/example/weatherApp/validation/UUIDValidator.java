@@ -11,3 +11,4 @@ public class UUIDValidator {
         return uuid != null && UUID_PATTERN.matcher(uuid).matches();
     }
 }
+

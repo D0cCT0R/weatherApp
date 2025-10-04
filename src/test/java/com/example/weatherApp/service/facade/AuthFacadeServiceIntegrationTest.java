@@ -34,6 +34,7 @@ public class AuthFacadeServiceIntegrationTest {
     private final String secondLogin = "log@Gmail.com";
     private final String password = PasswordUtil.hashPassword("123");
 
+
     @Test
     void tryToAuthUserLoginNotFound() {
         assertThrows(AuthenticationFailedException.class, () -> {

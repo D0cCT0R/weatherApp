@@ -33,6 +33,7 @@ public class UserWeatherFacadeService {
         this.userService = userService;
     }
 
+
     public List<WeatherDto> getUserLocationsWithWeather(Long userId) throws Exception {
         List<Location> userLocations = locationService.getAllUserLocations(userId);
         if (!userLocations.isEmpty()) {

@@ -25,6 +25,7 @@ public class DataConfig {
     @Value("${db.driver-class}")
     private String DATABASE_DRIVER;
 
+
     @Bean
     public DataSource dataSource() {
         HikariConfig config = new HikariConfig();

@@ -19,6 +19,7 @@ public class LocationService {
 
     private final LocationDao locationDao;
 
+
     @Autowired
     public LocationService(LocationDao locationDao) {
         this.locationDao = locationDao;

@@ -8,3 +8,4 @@ public record DeleteLocationDto (
         @NotBlank String lon
 ) {
 }
+

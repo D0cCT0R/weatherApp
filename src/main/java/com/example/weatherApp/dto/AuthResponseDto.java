@@ -10,3 +10,4 @@ public record AuthResponseDto(
         String userLogin,
         UUID sessionUUID
 ) {}
+

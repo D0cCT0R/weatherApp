@@ -30,6 +30,7 @@ public class WeatherService {
         this.restClient = restClient;
     }
 
+
     public WeatherDto getWeatherByCity(double lat, double lon) throws WeatherApiException {
         log.debug("Weather request by coordinates: lat={}, lon={}", lat, lon);
         try {

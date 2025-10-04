@@ -25,6 +25,7 @@ public class SessionDao {
         this.sessionFactory = sessionFactory;
     }
 
+
     public Session save(Session session) throws DatabaseIsNotAvailableException {
         log.debug("Executing session save for user: {}", session.getUser().getLogin());
         try {

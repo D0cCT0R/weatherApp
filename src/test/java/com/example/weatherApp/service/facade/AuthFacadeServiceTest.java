@@ -31,6 +31,7 @@ public class AuthFacadeServiceTest {
     private final String userLogin = "Login";
     private final String userPassword = "$2a$10$qtsDMfUyB1vaPzST4fctQuJq/1hGDtB6mvVFsVF1Q/4Rn7LaPyjxi";
 
+
     @Test
     void AuthFailedLoginNotFound() throws DatabaseIsNotAvailableException {
         when(userService.getUserByLogin(userLogin)).thenReturn(Optional.empty());

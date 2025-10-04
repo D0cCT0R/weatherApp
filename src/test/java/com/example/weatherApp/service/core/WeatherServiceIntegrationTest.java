@@ -40,6 +40,7 @@ public class WeatherServiceIntegrationTest {
         mockWebServer.shutdown();
     }
 
+
     @Test
     void getWeatherByCityParseBasicWeatherResponse() throws WeatherApiException {
         String mockResponse = """

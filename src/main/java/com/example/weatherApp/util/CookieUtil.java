@@ -18,6 +18,7 @@ public class CookieUtil {
         cookie.setMaxAge(3600);
         return cookie;
     }
+
     public static Cookie deleteSessionCookie() {
         Cookie cookie = new Cookie(COOKIE_SESSION_NAME, null);
         cookie.setHttpOnly(true);

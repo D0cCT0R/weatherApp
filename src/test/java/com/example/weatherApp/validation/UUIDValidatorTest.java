@@ -24,3 +24,4 @@ public class UUIDValidatorTest {
         assertFalse(UUIDValidator.isValidUuid("123e4567e89b12d3a456426614174000"), "No hyphens");
     }
 }
+

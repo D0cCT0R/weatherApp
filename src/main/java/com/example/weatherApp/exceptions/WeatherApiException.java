@@ -10,3 +10,4 @@ public class WeatherApiException extends Exception {
         this.statusCode = statusCode;
     }
 }
+

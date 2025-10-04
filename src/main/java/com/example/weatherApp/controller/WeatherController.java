@@ -27,6 +27,7 @@ public class WeatherController {
 
     private final UserWeatherFacadeService userWeatherFacadeService;
 
+
     @Autowired
     public WeatherController(SearchFacadeService searchFacadeService, UserWeatherFacadeService userWeatherFacadeService) {
         this.searchFacadeService = searchFacadeService;

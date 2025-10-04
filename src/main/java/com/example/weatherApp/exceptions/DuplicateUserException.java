@@ -8,3 +8,4 @@ public class DuplicateUserException extends Exception{
         super(errorMessage);
     }
 }
+

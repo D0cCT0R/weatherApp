@@ -21,3 +21,4 @@ public class PublicPagesInterceptor implements HandlerInterceptor {
         return cookie == null;
     }
 }
+

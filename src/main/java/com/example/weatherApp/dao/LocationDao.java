@@ -22,6 +22,7 @@ public class LocationDao {
         this.sessionFactory = sessionFactory;
     }
 
+
     public List<Location> getUserLocations(Long userId) throws DatabaseIsNotAvailableException {
         try {
             log.debug("Executing get all User locations by user userId {}", userId);

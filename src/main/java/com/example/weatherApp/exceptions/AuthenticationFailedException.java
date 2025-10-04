@@ -5,3 +5,4 @@ public class AuthenticationFailedException extends Exception{
         super(message);
     }
 }
+
