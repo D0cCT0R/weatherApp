@@ -20,6 +20,7 @@ public class RegistrationFacadeService {
     private final UserService userService;
     private final SessionService sessionService;
 
+
     @Autowired
     public RegistrationFacadeService(UserService userService, SessionService sessionService) {
         this.userService = userService;

@@ -33,6 +33,7 @@ public class AuthController {
 
     private final AuthFacadeService authFacadeService;
 
+
     @Autowired
     public AuthController(AuthFacadeService authFacadeService) {
         this.authFacadeService = authFacadeService;

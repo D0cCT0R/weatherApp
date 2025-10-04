@@ -8,3 +8,4 @@ databaseChangeLog:
   - include:
       file: init/20250604__create_location_table.yaml
       relativeToChangelogFile: true
+

@@ -7,3 +7,4 @@ public record RegistrationResponseDto (
         String userLogin,
         UUID sessionUUID
 ) {}
+

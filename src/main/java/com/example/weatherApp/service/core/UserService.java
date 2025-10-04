@@ -31,6 +31,7 @@ public class UserService {
         return userDao.save(user);
     }
 
+
     @Transactional(readOnly = true)
     public Optional<User> getUserByLogin(String login) throws DatabaseIsNotAvailableException {
         return userDao.getByLogin(login);

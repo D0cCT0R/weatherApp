@@ -9,3 +9,4 @@ public class CoordinatesValidator {
                 lon >= -180 && lon <= 180;
     }
 }
+

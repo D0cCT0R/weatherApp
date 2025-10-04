@@ -40,3 +40,4 @@ databaseChangeLog:
             onUpdate: cascade
             onDelete: cascade
             validate: true
+

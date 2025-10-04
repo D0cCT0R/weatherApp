@@ -18,3 +18,4 @@ public class CoordinatesValidatorTest {
         assertFalse(CoordinatesValidator.isValidCoordinates(0.0, 180.1));
     }
 }
+

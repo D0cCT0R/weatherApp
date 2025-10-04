@@ -28,3 +28,4 @@ public class Location {
     @Column(name = "longitude")
     private double longitude;
 }
+

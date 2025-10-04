@@ -9,6 +9,7 @@ public record WeatherDto(
      Coord coord
 ) {
 
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     public record Main (int temp) {}
 

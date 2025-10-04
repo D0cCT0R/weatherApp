@@ -30,6 +30,7 @@ public class ExceptionControllerAdvice {
         return "sign-in";
     }
 
+
     @ExceptionHandler(WeatherApiException.class)
     public String handleWeatherApiException(WeatherApiException ex, Model model, HttpServletResponse response) {
         model.addAttribute("error", ex.getMessage());

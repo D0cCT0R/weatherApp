@@ -20,6 +20,7 @@ public class SessionService {
     private final SessionDao sessionDao;
     private static final int SESSION_DURATION_HOURS = 1;
 
+
     @Autowired
     public SessionService(SessionDao sessionDao) {
         this.sessionDao = sessionDao;

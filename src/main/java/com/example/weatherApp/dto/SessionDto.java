@@ -12,3 +12,4 @@ public record SessionDto (
         UserDto user,
         OffsetDateTime expiresAt
 ){}
+

@@ -31,6 +31,7 @@ public class AuthFacadeService {
         this.sessionService = sessionService;
     }
 
+
     public AuthResponseDto authUser(String login, String password) throws DatabaseIsNotAvailableException, AuthenticationFailedException {
         log.info("Starting user auth for login: {}", login);
         User user = userService.getUserByLogin(login).orElseThrow(() -> {

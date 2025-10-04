@@ -6,3 +6,4 @@ public class DatabaseIsNotAvailableException extends Exception{
         super(message);
     }
 }
+

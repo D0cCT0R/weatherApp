@@ -9,3 +9,4 @@ public record AddLocationDto(
         @NotBlank String lon
 ) {
 }
+

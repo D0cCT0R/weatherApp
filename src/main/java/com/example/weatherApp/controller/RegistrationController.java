@@ -25,6 +25,7 @@ public class RegistrationController {
 
     private final RegistrationFacadeService registrationFacadeService;
 
+
     @Autowired
     public RegistrationController(RegistrationFacadeService registrationFacadeService) {
         this.registrationFacadeService = registrationFacadeService;

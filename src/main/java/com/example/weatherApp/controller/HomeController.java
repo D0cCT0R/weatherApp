@@ -20,6 +20,7 @@ public class HomeController {
 
     private final UserWeatherFacadeService userWeatherFacadeService;
 
+
     @Autowired
     public HomeController(UserWeatherFacadeService userWeatherFacadeService) {
         this.userWeatherFacadeService = userWeatherFacadeService;

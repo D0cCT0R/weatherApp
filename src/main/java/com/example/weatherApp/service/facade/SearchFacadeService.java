@@ -23,6 +23,7 @@ public class SearchFacadeService {
         this.weatherService = weatherService;
     }
 
+
     public List<WeatherDto> searchWeatherByQuery(String query) throws WeatherApiException {
         List<WeatherGeocodingDto> cityList = weatherService.searchLocations(query);
         List<WeatherDto> weatherList = new ArrayList<>();

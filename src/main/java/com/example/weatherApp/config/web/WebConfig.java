@@ -20,6 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @RequiredArgsConstructor
 public class WebConfig implements WebMvcConfigurer {
 
+
     private final AuthInterceptor authInterceptor;
     private final PublicPagesInterceptor publicPagesInterceptor;
 
